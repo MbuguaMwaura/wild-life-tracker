@@ -22,4 +22,17 @@ public class Species{
     public boolean isEndangered(){
         return endangered;
     }
+
+    @Override
+    public boolean equals(Object otherSpecies){
+        if(!(otherSpecies instanceof Species)){
+            return false;
+        } else {
+            Species species = (Species) otherSpecies;
+            return this.getName().equals(species.getName()) &&
+                    this.getPopulation() == species.getPopulation() &&
+                    this.isEndangered() == species.isEndangered();
+
+        }
+    }
 }

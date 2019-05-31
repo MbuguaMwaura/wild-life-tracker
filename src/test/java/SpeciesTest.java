@@ -31,4 +31,11 @@ public class SpeciesTest{
         Species species = new Species("Buffalo", 2000, false);
         assertEquals(false, species.isEndangered());
     }
+
+    @Test
+    public void equals_assertsThatObjectsWithSameValueAreEqual(){
+        Species speciesOne = new Species("Buffalo", 2000, false);
+        Species speciesTwo = new Species("Buffalo", 2000, false);
+        assertTrue(speciesOne.equals(speciesTwo));
+    }
 }
