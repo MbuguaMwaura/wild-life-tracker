@@ -38,4 +38,11 @@ public class SpeciesTest{
         Species speciesTwo = new Species("Buffalo", 2000, false);
         assertTrue(speciesOne.equals(speciesTwo));
     }
+
+    @Test
+    public void save_insertsObjectIntoDatabase(){
+        Species species = new Species("Buffalo", 2000, false);
+        species.save();
+        assertEquals(true, Species.all().get(0).equals(species));
+    }
 }
