@@ -20,4 +20,10 @@ public class SpeciesTest{
         Species species = new Species("Buffalo", 2000, false);
         assertEquals("Buffalo", species.getName());
     }
+
+    @Test
+    public void getPopulation_instantiatesWithPopulation(){
+        Species species = new Species("Buffalo", 2000, false);
+        assertEquals(2000, species.getPopulation());
+    }
 }
