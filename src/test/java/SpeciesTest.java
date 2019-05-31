@@ -26,4 +26,9 @@ public class SpeciesTest{
         Species species = new Species("Buffalo", 2000, false);
         assertEquals(2000, species.getPopulation());
     }
+    @Test
+    public void getEndangered_instantiatesWithEndangered(){
+        Species species = new Species("Buffalo", 2000, false);
+        assertEquals(false, species.isEndangered());
+    }
 }
