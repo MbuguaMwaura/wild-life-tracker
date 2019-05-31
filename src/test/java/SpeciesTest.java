@@ -14,4 +14,10 @@ public class SpeciesTest{
         Species testSpecies = new Species("Buffalo", 2000, false);
         assertEquals(true,testSpecies instanceof Species );
     }
+
+    @Test
+    public void getName_instantiatesWithName(){
+        Species species = new Species("Buffalo", 2000, false);
+        assertEquals("Buffalo", species.getName());
+    }
 }
