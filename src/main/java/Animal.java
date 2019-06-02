@@ -32,6 +32,10 @@ public class Animal{
         return health;
     }
 
+    public int getId(){
+        return id;
+    }
+
     @Override
     public boolean equals(Object otherAnimal){
         if(!(otherAnimal instanceof Animal)){
@@ -65,6 +69,15 @@ public class Animal{
             String sql = "SELECT * FROM animals";
          return    con.createQuery(sql)
                     .executeAndFetch(Animal.class);
+        }
+    }
+    public static Animal find(int id){
+        try (Connection con = DB.sql2o.open()){
+            String sql = "SELECT * FROM animals WHERE id =:id";
+            Animal animal  = con.createQuery(sql)
+                    .addParameter("id", id)
+                    .executeAndFetchFirst(Animal.class);
+            return animal;
         }
     }
 }

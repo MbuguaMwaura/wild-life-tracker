@@ -59,5 +59,14 @@ public class AnimalTest{
 
     }
 
+    @Test
+    public void find_retrievesASpecificAnimalUsingItsId(){
+        Animal animal =  new Animal ("Jaguar", 1, "newborn","healthy");
+        animal.save();
+        Animal animalTwo =  new Animal ("Leopard", 1, "adult","healthy");
+        animalTwo.save();
+        assertEquals(animalTwo.getName(), Animal.find(animalTwo.getId()).getName());
+    }
+
 
 }
