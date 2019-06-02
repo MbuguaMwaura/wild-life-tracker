@@ -72,4 +72,16 @@ public class Species{
         return species;
         }
     }
+
+    public void update(String name, int population, boolean endangered){
+        try(Connection con = DB.sql2o.open()){
+            String sql = "UPDATE species SET name = :name, population = :population, endangered = :endangered WHERE id = :id";
+            con.createQuery(sql)
+                    .addParameter("name", name)
+                    .addParameter("population", population)
+                    .addParameter("endangered", endangered)
+                    .addParameter("id", id)
+                    .executeUpdate();
+        }
+    }
 }

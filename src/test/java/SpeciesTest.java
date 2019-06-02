@@ -54,4 +54,13 @@ public class SpeciesTest{
         speciesTwo.save();
         assertEquals(Species.find(speciesTwo.getId()), speciesTwo);
     }
+
+    @Test
+    public void update_updatesTheDetailsOfASpecies(){
+        Species species = new Species("Buffalo", 2000, false);
+        species.save();
+        species.update("Buffalo", 1281, false);
+        assertEquals(1281, Species.find(species.getId()).getPopulation());
+
+    }
 }
