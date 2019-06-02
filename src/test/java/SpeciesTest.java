@@ -45,4 +45,13 @@ public class SpeciesTest{
         species.save();
         assertEquals(true, Species.all().get(0).equals(species));
     }
+
+    @Test
+    public void find_retrievesAnObjectWithSimilarId(){
+        Species speciesOne = new Species("Buffalo", 2000, false);
+        speciesOne.save();
+        Species speciesTwo = new Species("Antelope", 20000, false);
+        speciesTwo.save();
+        assertEquals(Species.find(speciesTwo.getId()), speciesTwo);
+    }
 }

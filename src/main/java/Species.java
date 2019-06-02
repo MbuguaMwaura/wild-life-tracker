@@ -62,4 +62,14 @@ public class Species{
             return con.createQuery(sql).executeAndFetch(Species.class);
         }
     }
+
+    public static Species find(int id){
+        try (Connection con = DB.sql2o.open()){
+            String sql = "SELECT * FROM species WHERE id =:id";
+        Species species  = con.createQuery(sql)
+                    .addParameter("id", id)
+                    .executeAndFetchFirst(Species.class);
+        return species;
+        }
+    }
 }
