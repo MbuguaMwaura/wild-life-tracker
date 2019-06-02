@@ -80,4 +80,16 @@ public class Animal{
             return animal;
         }
     }
+    public void update(String name, int species_id, String age, String health){
+        try(Connection con = DB.sql2o.open()){
+            String sql = "UPDATE animals SET name = :name, species_id = :species_id, age = :age, health = :health WHERE id = :id";
+            con.createQuery(sql)
+                    .addParameter("name", name)
+                    .addParameter("species_id", species_id)
+                    .addParameter("age", age)
+                    .addParameter("health" , health)
+                    .addParameter("id", id)
+                    .executeUpdate();
+        }
+    }
 }
