@@ -41,6 +41,23 @@ public class AnimalTest{
         assertTrue(animal.equals(animaltwo));
     }
 
+    @Test
+    public void save_savesObjectIntoDatabase(){
+        Animal animal =  new Animal ("Jaguar", 1, "newborn","healthy");
+        animal.save();
+        assertEquals(true, Animal.all().get(0).equals(animal));
+    }
+
+    @Test
+    public void all_retrievesAllInstancesFromTheDatabase(){
+        Animal animal =  new Animal ("Jaguar", 1, "newborn","healthy");
+        animal.save();
+        Animal animalTwo =  new Animal ("Leopard", 1, "adult","healthy");
+        animalTwo.save();
+        assertTrue(Animal.all().get(0).equals(animal));
+        assertTrue(Animal.all().get(1).equals(animalTwo));
+
+    }
 
 
 }

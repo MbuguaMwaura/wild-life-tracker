@@ -1,12 +1,13 @@
 import java.util.Arrays;
-
+import org.sql2o.*;
+import java.util.List;
 
 public class Animal{
     private String name;
     private int species_id;
     private String age;
     private String health;
-
+    private int id;
 
 
     public Animal(String name, int species_id, String age, String health){
@@ -45,4 +46,25 @@ public class Animal{
         }
     }
 
+    public void save(){
+        try(Connection con = DB.sql2o.open()){
+            String sql = "INSERT INTO animals (name, health, age, species_id) VALUES (:name, :health, :age, :species_id)";
+          this.id =(int) con.createQuery(sql, true)
+                    .addParameter("name", this.name)
+                    .addParameter("health", this.health)
+                    .addParameter("age", this.age)
+                    .addParameter("species_id", this.species_id)
+                    .executeUpdate()
+                  .getKey();
+
+        }
+    }
+
+    public static List<Animal> all(){
+        try(Connection con = DB.sql2o.open()){
+            String sql = "SELECT * FROM animals";
+         return    con.createQuery(sql)
+                    .executeAndFetch(Animal.class);
+        }
+    }
 }
