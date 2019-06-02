@@ -34,6 +34,13 @@ public class AnimalTest{
         Animal animal =  new Animal ("Jaguar", 1, "newborn","healthy");
         assertEquals("healthy", animal.getHealth());
     }
+    @Test
+    public void equals_returnsTrueIfObjectsAreEquals(){
+        Animal animal =  new Animal ("Jaguar", 1, "newborn","healthy");
+        Animal animaltwo =  new Animal ("Jaguar", 1, "newborn","healthy");
+        assertTrue(animal.equals(animaltwo));
+    }
+
 
 
 }

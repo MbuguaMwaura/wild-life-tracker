@@ -30,4 +30,19 @@ public class Animal{
     public String getHealth(){
         return health;
     }
+
+    @Override
+    public boolean equals(Object otherAnimal){
+        if(!(otherAnimal instanceof Animal)){
+            return false;
+        } else {
+            Animal animal = (Animal) otherAnimal;
+            return this.getName().equals(animal.getName()) &&
+                    this.getSpecies_id() == animal.getSpecies_id() &&
+                    this.getAge().equals(animal.getAge()) &&
+                    this.getHealth().equals(animal.getHealth());
+
+        }
+    }
+
 }
