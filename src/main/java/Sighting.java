@@ -73,6 +73,7 @@ public class Sighting{
 
 
 
+
     @Override
     public boolean equals(Object otherSighting){
         if(!(otherSighting instanceof Sighting)){

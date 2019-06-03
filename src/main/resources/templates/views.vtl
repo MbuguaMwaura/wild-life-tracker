@@ -4,7 +4,11 @@
 
 <hr>
 
+
+<div class = "row">
+
 #foreach($sighting in $sightings)
+<div class = "col-md-6">
     <br>
     <div class="card text-center">
       <div class="card-header">
@@ -13,13 +17,22 @@
 
       </div>
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#!" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title"> $sighting.getLocation( $sighting.getLocation_id() ).getName()</h5>
+        <p class="card-text">Sighted by:  $sighting.getRanger( $sighting.getRanger_id() ).getName()</p>
+
+       #if( $sighting.getSpecies( $sighting.getSpecies_id() ).isEndangered() == false )
+
+        <span class="badge badge-pill badge-default">Not Endangered</span>
+        #else
+        <span class="badge badge-pill badge-danger">Endangered</span>
+        #end
       </div>
       <div class="card-footer text-muted">
         $sighting.getFormattedDate()
       </div>
     </div>
-
+</div>
 #end
+
+
+</div>
