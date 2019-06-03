@@ -52,6 +52,10 @@ public class Sighting{
         return id;
     }
 
+    public String getFormattedDate(){
+        return DateFormat.getDateTimeInstance().format(time);
+    }
+
     @Override
     public boolean equals(Object otherSighting){
         if(!(otherSighting instanceof Sighting)){
