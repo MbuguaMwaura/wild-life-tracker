@@ -59,6 +59,18 @@ public class Sighting{
    public static Animal getAnimal(int id){
         return Animal.find(id);
    }
+    public static Location getLocation(int id){
+        return Location.find(id);
+    }
+    public static Ranger getRanger(int id){
+        return Ranger.find(id);
+    }
+    public static Species getSpecies(int id){
+        return Species.find(id);
+    }
+
+
+
 
 
     @Override
