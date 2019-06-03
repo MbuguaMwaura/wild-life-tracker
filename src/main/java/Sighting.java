@@ -1,12 +1,19 @@
+
+import java.text.DateFormat;
 import java.util.Arrays;
 import org.sql2o.*;
+
+import java.util.Date;
 import java.util.List;
+import java.sql.Timestamp;
+
 
 public class Sighting{
     private int animal_id;
     private int location_id;
     private int ranger_id;
     private int species_id;
+    private Timestamp time;
 
     private int id;
 
@@ -16,6 +23,8 @@ public class Sighting{
        this.location_id = location_id;
        this.ranger_id = ranger_id;
         this.species_id = species_id;
+
+
        
     }
 
@@ -35,7 +44,9 @@ public class Sighting{
         return species_id;
     }
 
-  
+    public Timestamp getTime() {
+        return time;
+    }
 
     public int getId(){
         return id;
@@ -57,7 +68,7 @@ public class Sighting{
 
     public void save(){
         try(Connection con = DB.sql2o.open()){
-            String sql = "INSERT INTO sightings (animal_id, location_id, ranger_id, species_id) VALUES (:animal_id, :location_id, :ranger_id, :species_id)";
+            String sql = "INSERT INTO sightings (animal_id, location_id, ranger_id, species_id, time) VALUES (:animal_id, :location_id, :ranger_id, :species_id ,now())";
             this.id =(int) con.createQuery(sql, true)
                     .addParameter("animal_id", this.animal_id)
                     .addParameter("location_id", this.location_id)
@@ -87,7 +98,7 @@ public class Sighting{
     }
     public void update(int animal_id, int location_id, int ranger_id,  int species_id){
         try(Connection con = DB.sql2o.open()){
-            String sql = "UPDATE sightings SET animal_id = :animal_id, species_id = :species_id, location_id = :location_id, ranger_id = :ranger_id WHERE id = :id";
+            String sql = "UPDATE sightings SET animal_id = :animal_id, species_id = :species_id, location_id = :location_id, ranger_id = :ranger_id, time = now() WHERE id = :id";
             con.createQuery(sql)
                     .addParameter("animal_id", animal_id)
                     .addParameter("species_id", species_id)

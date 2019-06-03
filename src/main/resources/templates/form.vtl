@@ -23,7 +23,7 @@
              <input type="number" id="population" name="population" class="form-control mb-4" placeholder="Population">
 
                 <select class="browser-default custom-select" name="endangered", id="endangered" >
-                   <option selected>The species is endangered:</option>
+                   <option disabled selected>The species is endangered:</option>
                    <option value="true">True</option>
                    <option value="false">False</option>
 
@@ -31,7 +31,7 @@
 
 
 
-             <button class="btn btn-info btn-block" type="submit"  name="action" >Send</button>
+             <button class="btn btn-info btn-block" type="submit"  name="action" >Add</button>
          </form>
 
 
@@ -47,7 +47,7 @@
 
     <input type="number" id="badge" name = "badge" class="form-control mb-4" placeholder="Badge Number">
 
-    <button class="btn btn-info btn-block" type="submit" name = "action" >Send</button>
+    <button class="btn btn-info btn-block" type="submit" name = "action" >Add</button>
 </form>
 
 
@@ -55,29 +55,29 @@
 
       <h4 id="list-item-3">Animal Form</h4>
 
-      <form class="border border-light p-5" >
+      <form class="border border-light p-5"action="/animal" method="post" >
 
           <p class="h4 mb-4 text-center">Add An Animal</p>
 
 
-          <input type="text" id="name" class="form-control mb-4" placeholder="Name">
+          <input type="text" id="name" name = "name" class="form-control mb-4" placeholder="Name">
 
-          <select class="custom-select">
-            <option selected>Select A Species</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+          <select class="custom-select" name = "species_id" id = "species_id" >
+            <option disabled selected>Select A Species</option>
+            #foreach($species in $species)
+                <option value="$species.getId()">$species.getName()</option>
+            #end
           </select>
 
-            <select class="custom-select">
-              <option selected>Select Animal Age</option>
+            <select class="custom-select" name = "age" id = "age">
+              <option disabled selected>Select Animal Age</option>
               <option value="newborn">Newborn</option>
               <option value="young">Young</option>
               <option value="adult">Adult</option>
             </select>
 
-             <select class="custom-select">
-              <option selected>Select Animal Health</option>
+             <select class="custom-select" name = "health", id= "health">
+              <option disabled selected>Select Animal Health</option>
               <option value="healthy">Healthy</option>
               <option value="okay">Okay</option>
               <option value="ill">Ill</option>
@@ -85,7 +85,7 @@
 
 
 
-          <button class="btn btn-info btn-block" type="submit">Send</button>
+          <button class="btn btn-info btn-block" type="submit" name = "action" >Add</button>
       </form>
 
 
