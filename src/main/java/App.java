@@ -29,6 +29,18 @@ public class App{
             model.put("template", "templates/sightings.vtl");
             return new ModelAndView(model,layout);
         }, new VelocityTemplateEngine());
+
+        post("/species", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            String name = request.queryParams("name");
+            int population =Integer.parseInt(request.queryParams("population"));
+            boolean endangered =Boolean.parseBoolean(request.queryParams("endangered")) ;
+            Species species = new Species(name,population,endangered);
+            species.save();
+            model.put("species", Species.all());
+            model.put("template", "templates/index.vtl");
+            return new ModelAndView(model, layout);
+        }, new VelocityTemplateEngine());
     }
 
 

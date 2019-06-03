@@ -12,26 +12,26 @@
 
     <h4 id="list-item-1">Species Form</h4>
 
-         <form class="border border-light p-5">
+         <form class="border border-light p-5" action="/species" method="post" >
 
              <p class="h4 mb-4 text-center">Add A Species</p>
 
 
-             <input type="text" id="name" class="form-control mb-4" placeholder="Name">
+             <input type="text" id="name" name="name" class="form-control mb-4" placeholder="Name">
 
 
-             <input type="number" id="population" class="form-control mb-4" placeholder="Population">
+             <input type="number" id="population" name="population" class="form-control mb-4" placeholder="Population">
 
-                <select class="browser-default custom-select">
+                <select class="browser-default custom-select" name="endangered", id="endangered" >
                    <option selected>The species is endangered:</option>
-                   <option value=true>True</option>
-                   <option value=false>False</option>
+                   <option value="true">True</option>
+                   <option value="false">False</option>
 
                  </select>
 
 
 
-             <button class="btn btn-info btn-block" type="submit">Send</button>
+             <button class="btn btn-info btn-block" type="submit"  name="action" >Send</button>
          </form>
 
 
@@ -55,7 +55,7 @@
 
       <h4 id="list-item-3">Animal Form</h4>
 
-      <form class="border border-light p-5">
+      <form class="border border-light p-5" >
 
           <p class="h4 mb-4 text-center">Add An Animal</p>
 
