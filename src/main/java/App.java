@@ -41,6 +41,16 @@ public class App{
             model.put("template", "templates/index.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
+
+        post("/ranger" , (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            String name = request.queryParams("name");
+            int badge = Integer.parseInt(request.queryParams("badge"));
+            Ranger ranger = new Ranger(name, badge);
+            ranger.save();
+            model.put("template", "templates/index.vtl");
+            return new ModelAndView(model, layout);
+        }, new VelocityTemplateEngine());
     }
 
 
