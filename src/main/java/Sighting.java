@@ -56,6 +56,11 @@ public class Sighting{
         return DateFormat.getDateTimeInstance().format(time);
     }
 
+   public static Animal getAnimal(int id){
+        return Animal.find(id);
+   }
+
+
     @Override
     public boolean equals(Object otherSighting){
         if(!(otherSighting instanceof Sighting)){
