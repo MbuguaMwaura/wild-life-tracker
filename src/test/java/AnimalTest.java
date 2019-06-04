@@ -72,7 +72,7 @@ public class AnimalTest{
     public void update_updatesAnAnimalDetails(){
         Animal animal =  new Animal ("Jaguar", 1, "newborn","healthy");
         animal.save();
-        animal.update("Leopard", 1, "adult","healthy");
+        animal.update("adult","healthy");
         assertEquals("adult", Animal.find(animal.getId()).getAge());
     }
 

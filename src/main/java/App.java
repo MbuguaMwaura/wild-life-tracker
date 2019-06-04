@@ -45,8 +45,9 @@ public class App{
             Species species = new Species(name,population,endangered);
             species.save();
             model.put("species", Species.all());
-            model.put("template", "templates/index.vtl");
-            return new ModelAndView(model, layout);
+            String url = String.format("/views");
+            response.redirect(url);
+            return new ModelAndView(model,layout);
         }, new VelocityTemplateEngine());
 
         post("/ranger" , (request, response) -> {
@@ -55,8 +56,9 @@ public class App{
             int badge = Integer.parseInt(request.queryParams("badge"));
             Ranger ranger = new Ranger(name, badge);
             ranger.save();
-            model.put("template", "templates/index.vtl");
-            return new ModelAndView(model, layout);
+            String url = String.format("/views");
+            response.redirect(url);
+            return new ModelAndView(model,layout);
         }, new VelocityTemplateEngine());
 
         post("/animal", (request, response) -> {
@@ -67,8 +69,9 @@ public class App{
             String health = request.queryParams("health");
             Animal animal = new Animal(name, species_id, age, health);
             animal.save();
-            model.put("template", "templates/index.vtl");
-            return new ModelAndView(model, layout);
+            String url = String.format("/views");
+            response.redirect(url);
+            return new ModelAndView(model,layout);
         }, new VelocityTemplateEngine());
 
         post("/sighted", (request, response) -> {
@@ -79,8 +82,9 @@ public class App{
             int ranger = Integer.parseInt(request.queryParams("ranger_id"));
             Sighting sighting = new Sighting(animal,location_id,ranger,species );
             sighting.save();
-            model.put("template", "templates/index.vtl");
-            return new ModelAndView(model, layout);
+            String url = String.format("/views");
+            response.redirect(url);
+            return new ModelAndView(model,layout);
         }, new VelocityTemplateEngine());
 
         post("/location", (request, response) -> {
@@ -88,8 +92,9 @@ public class App{
             String name = request.queryParams("name");
             Location location = new Location(name);
             location.save();
-            model.put("template", "templates/index.vtl");
-            return new ModelAndView(model, layout);
+            String url = String.format("/views");
+            response.redirect(url);
+            return new ModelAndView(model,layout);
         }, new VelocityTemplateEngine());
 
         get("/views", (request, response) -> {

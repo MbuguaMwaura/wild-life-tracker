@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>WILDLIFE TRACKER</title>
+     <link rel='stylesheet' href='/app.css'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -17,7 +18,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js"></script>
-    <link rel='stylesheet' href='/app.css'>
+
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
@@ -25,10 +26,10 @@
   </head>
   <body>
 <!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark primary-color">
+<nav class="navbar navbar-expand-lg navbar-dark success-color-dark">
 
   <!-- Navbar brand -->
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="/">WAKANDA</a>
 
   <!-- Collapse button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -40,38 +41,24 @@
   <div class="collapse navbar-collapse" id="basicExampleNav">
 
     <!-- Links -->
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home
-          <span class="sr-only">(current)</span>
-        </a>
+    <ul class="navbar-nav mr-auto my-0">
+
+      <li class="nav-item">
+        <a class="nav-link" href="/form">Add Info</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="/sightings">Add Sighting</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link" href="/views">Sightings</a>
       </li>
 
-      <!-- Dropdown -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">Dropdown</a>
-        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="/">Home</a>
-          <a class="dropdown-item" href="/form">Add Page</a>
-          <a class="dropdown-item" href="/sightings">Sightings</a>
-        </div>
-      </li>
+
 
     </ul>
     <!-- Links -->
 
-    <form class="form-inline">
-      <div class="md-form my-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      </div>
-    </form>
+
   </div>
   <!-- Collapsible content -->
 
@@ -81,8 +68,10 @@
     <div class="container">
       #parse( $template )
     </div>
+
+
 <!-- Footer -->
-<footer class="page-footer font-small blue pt-4 fixed-bottom">
+<footer class="page-footer font-small success-color-dark pt-4 bottom ">
 
   <!-- Footer Links -->
   <div class="container-fluid text-center text-md-left">
@@ -94,13 +83,11 @@
       <div class="col-md-6 mt-md-0 mt-3">
 
         <!-- Content -->
-        <h5 class="text-uppercase">Footer Content</h5>
-        <p>Here you can use rows and columns to organize your footer content.</p>
+        <h5 class="text-uppercase">WAKANDA PARK</h5>
+        <p>The park was establised in 1992 to care for, protect and restore our natural wildlife. </p>
 
       </div>
-      <!-- Grid column -->
 
-      <hr class="clearfix w-100 d-md-none pb-3">
 
       <!-- Grid column -->
       <div class="col-md-3 mb-md-0 mb-3">
@@ -110,40 +97,16 @@
 
         <ul class="list-unstyled">
           <li>
-            <a href="#!">Link 1</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a href="#!">Link 2</a>
+            <a href="/form">Add Information/data</a>
           </li>
           <li>
-            <a href="#!">Link 3</a>
+            <a href="/sighings">Add a sighting</a>
           </li>
           <li>
-            <a href="#!">Link 4</a>
-          </li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-md-3 mb-md-0 mb-3">
-
-        <!-- Links -->
-        <h5 class="text-uppercase">Links</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!">Link 1</a>
-          </li>
-          <li>
-            <a href="#!">Link 2</a>
-          </li>
-          <li>
-            <a href="#!">Link 3</a>
-          </li>
-          <li>
-            <a href="#!">Link 4</a>
+            <a href="/views">View the information</a>
           </li>
         </ul>
 
@@ -157,8 +120,8 @@
   <!-- Footer Links -->
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2018 Copyright:
-    <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+  <div class="footer-copyright text-center py-3"> 2019 Copyright:
+    <a href="#"> WAKANDA PARK</a>
   </div>
   <!-- Copyright -->
 

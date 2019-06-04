@@ -3,4 +3,20 @@ height: 500px;
 position: relative;
 overflow-y: scroll;
 }
+.border{
+height: 500px;
+}
+.down{
+margin-top:5%;
+margin-bottom:5%;
+}
 
+.container {
+  display: flex;
+  flex-direction: column;
+  height: relative;
+}
+.intro{
+margin-top: 5%;
+height: 100vh;
+}

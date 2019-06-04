@@ -36,6 +36,10 @@ public class Animal{
         return id;
     }
 
+    public int getTotalAnimals(){
+        return Animal.all().size();
+    }
+
     @Override
     public boolean equals(Object otherAnimal){
         if(!(otherAnimal instanceof Animal)){
@@ -80,12 +84,11 @@ public class Animal{
             return animal;
         }
     }
-    public void update(String name, int species_id, String age, String health){
+    public void update( String age, String health){
         try(Connection con = DB.sql2o.open()){
-            String sql = "UPDATE animals SET name = :name, species_id = :species_id, age = :age, health = :health WHERE id = :id";
+            String sql = "UPDATE animals SET  age = :age, health = :health WHERE id = :id";
             con.createQuery(sql)
-                    .addParameter("name", name)
-                    .addParameter("species_id", species_id)
+
                     .addParameter("age", age)
                     .addParameter("health" , health)
                     .addParameter("id", id)
