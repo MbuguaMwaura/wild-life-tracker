@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b799cedd-f836-4821-b2b1-7befcce314c2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/form.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/form.vtl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.vtl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.vtl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sightings.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sightings.vtl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/views.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/views.vtl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AnimalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AnimalTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="b799cedd-f836-4821-b2b1-7befcce314c2" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -101,10 +90,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/views.vtl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="837">
+              <caret line="93" column="8" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/form.vtl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="86" column="8" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="8" />
+            <state relative-caret-position="493">
+              <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -123,18 +121,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="696">
               <caret line="24" column="86" selection-start-line="24" selection-start-column="86" selection-end-line="24" selection-end-column="86" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Species.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1102">
-              <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -195,7 +181,6 @@
         <option value="$PROJECT_DIR$/src/main/java/VelocityTemplateEngine.java" />
         <option value="$PROJECT_DIR$/src/test/java/SightingTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/public/script.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/views.vtl" />
         <option value="$PROJECT_DIR$/src/main/resources/public/app.css" />
         <option value="$PROJECT_DIR$/src/main/java/Animal.java" />
         <option value="$PROJECT_DIR$/src/test/java/AnimalTest.java" />
@@ -205,6 +190,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/layout.vtl" />
         <option value="$PROJECT_DIR$/src/main/java/App.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/form.vtl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/views.vtl" />
       </list>
     </option>
   </component>
@@ -319,6 +305,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="43" width="3200" height="1757" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28695372" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -493,13 +480,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/script.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/views.vtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Species.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1102">
@@ -592,8 +572,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/form.vtl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="86" column="8" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="8" />
+        <state relative-caret-position="493">
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/views.vtl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="93" column="8" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="8" />
         </state>
       </provider>
     </entry>
