@@ -1,0 +1,1 @@
+web: ./build/install/wildlife-tacker/bin/wildlife-tacker
